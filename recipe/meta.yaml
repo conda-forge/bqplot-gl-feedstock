@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bqplot >=0.13
+    - bqplot >=0.13,<0.14
 
 test:
   imports:
