@@ -1,13 +1,13 @@
 {% set name = "bqplot-gl" %}
-{% set version = "0.0.0" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bqplot-gl-{{ version }}.tar.gz
-  sha256: 0173b9133d64e8c6929ca375a714e789b07286b1047b7509743c599495947795
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f69702817022ae99d9f87024cc271e2d30d5324ea696def059fc671cad23ea2d
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bqplot >=0.12,<0.13
+    - bqplot >=0.13,<0.14
 
 test:
   imports:
