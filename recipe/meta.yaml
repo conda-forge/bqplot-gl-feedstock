@@ -18,7 +18,15 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - hatch
+    - hatchling
+    - hatch-nodejs-version
+    - hatch-build-scripts
+    - jupyterlab
     - setuptools
+    - hatch-jupyter-builder >=0.8.1
+    - nodejs 24.*
+    - yarn
   run:
     - python >={{ python_min }}
     - bqplot >=0.13,<0.14
